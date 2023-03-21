@@ -8,8 +8,29 @@ const http=require('http');
 // createServer will return a server
 const server=http.createServer((req,res)=>{
     // we are using an anonymous function as a request-listener
-    console.log("ritik gangwar");
-    res.render("ritik");
+    // console.log(req);
+    // process.exit();
+    // console.log(req.url,req.method,req.headers);
+
+    // allows us to set a new header(here we having the key set to Content-Type and the value to text/html)
+    // attaches a header to our response
+    res.setHeader('Content-Type','text/html');
+    // write() helps to write some data to the response
+    console.log(req.url);
+    res.write('<html>');
+    res.write('<head><title>My first page</title></head>');
+    res.write('<body>');
+    if(req.url==='/home')
+        res.write('<h1>Welcome home</h1>');
+    if(req.url==='/about')
+        res.write('<h1>Welcome to about us page</h1>');
+    if(req.url==='/node')
+        res.write('<h1>Hello from my Node.js server!</h1>');
+    res.write('</body>');
+    res.write('</html>');
+    // end() signifies that the response will be sent back to the client
+    // there shhould be nothing after it
+    res.end();
 });
 
 // listen will actually start a process where NodeJS will keep this running to listen for incoming requests
