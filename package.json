@@ -1,0 +1,24 @@
+{
+  "name": "task1-intro-6-creating-our-first-node-app",
+  "version": "1.0.0",
+  "description": "Creating package.json file",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritik2102/NodeJS-1-task-6-creating-our-first-node-server.git"
+  },
+  "author": "ritik gangwar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritik2102/NodeJS-1-task-6-creating-our-first-node-server/issues"
+  },
+  "homepage": "https://github.com/ritik2102/NodeJS-1-task-6-creating-our-first-node-server#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
